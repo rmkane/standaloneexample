@@ -25,7 +25,7 @@ USE `standalone_example`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `CONTACT`
+-- Table structure for table `standalone`
 --
 
 CREATE TABLE IF NOT EXISTS `standalone` (
