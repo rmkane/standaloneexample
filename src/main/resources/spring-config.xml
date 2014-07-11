@@ -52,11 +52,5 @@
 			class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
-
-	<!-- Dto Mappers -->
-	<bean id="standaloneDtoMapper"
-		class="com.github.ryankane.standaloneexample.model.mapper.StandaloneDtoMapper" />
-	<bean id="standaloneMapper"
-		class="com.github.ryankane.standaloneexample.model.mapper.StandaloneMapper" />
-
+	
 </beans>
