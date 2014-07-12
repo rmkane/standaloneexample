@@ -15,7 +15,7 @@
 
 	<bean id="propertyConfigurer"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-			<property name="location" value="jdbc.properties" />
+			<property name="location" value="hibernate.properties" />
 	</bean>
 
 	<!-- JDBC Data Source -->
@@ -34,14 +34,15 @@
 		<property name="dataSource" ref="myDataSource" />
 		<property name="packagesToScan">
 			<array>
-				<value>com.github.ryankane.standaloneexample</value>
+				<value>com.github.ryankane.standaloneexample.model</value>
 			</array>
 		</property>
 		<property name="hibernateProperties">
-			<value>
-				hibernate.dialect=org.hibernate.dialect.MySQLDialect
-				hibernate.hbm2ddl.auto=update
-			</value>
+			<props>
+				<prop key="hibernate.dialect">${hql.dialect}</prop>
+				<prop key="hibernate.hbm2ddl.auto">${hql.hbm2ddl.auto}</prop>
+				<prop key="hibenate.show_sql">${hql.showSql}</prop>
+			</props>
 		</property>
 	</bean>
 
